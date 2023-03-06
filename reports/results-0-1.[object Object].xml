@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="userinyerface" timestamp="2023-03-06T14:29:49" time="5.717" tests="4" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="userinyerface"/>
+      <property name="capabilities" value="chrome.110_0_5481_177.linux"/>
+      <property name="file" value="file://./test/specs/ui.specs.js"/>
+    </properties>
+    <testcase classname="chrome.110_0_5481_177.linux.userinyerface" name="Check for correct notification" time="2.354">
+      <system-out><![CDATA[
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/url - {"url":"https://userinyerface.com/"}
+RESULT: {"url":"https://userinyerface.com/"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//button[@class=\"start__button\"]"}
+RESULT: {"using":"xpath","value":"//button[@class=\"start__button\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//a[@class=\"start__link\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//a[@class=\"start__link\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element/b8cb1ca7-9fa3-49d1-846d-e1d18324d51c/click - {}
+RESULT: {}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//div[@class=\"password-check\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//div[@class=\"password-check\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/execute/sync - {"script":"return (()=> {\n      const element = document.querySelector(\".help-form\")\n      element.style.display = \"none\"\n    }).apply(null, arguments)","args":[]}
+RESULT: {"script":"return (()=> {\n      const element = document.querySelector(\".help-form\")\n      element.style.display = \"none\"\n    }).apply(null, arguments)","args":[]}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//input[@placeholder=\"Choose Password\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//input[@placeholder=\"Choose Password\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element/5d26b32e-d4af-4f11-ba5b-f4d54d5c50cb/clear - {}
+RESULT: {}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element/5d26b32e-d4af-4f11-ba5b-f4d54d5c50cb/value - {"text":"LbOqRiUiDu116"}
+RESULT: {"text":"LbOqRiUiDu116"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//input[@placeholder=\"Your email\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//input[@placeholder=\"Your email\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element/d88b944c-042c-47cc-bd1f-38523d24e31a/clear - {}
+RESULT: {}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element/d88b944c-042c-47cc-bd1f-38523d24e31a/value - {"text":"YgGsMhRmUj119"}
+RESULT: {"text":"YgGsMhRmUj119"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//input[@placeholder=\"Domain\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//input[@placeholder=\"Domain\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element/8dced98d-c775-489a-b337-464477d61769/clear - {}
+RESULT: {}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element/8dced98d-c775-489a-b337-464477d61769/value - {"text":"CdIjOoOoGt104"}
+RESULT: {"text":"CdIjOoOoGt104"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//div[contains(@class, \"dropdown--gray\")]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//div[contains(@class, \"dropdown--gray\")]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element/0b99bcbe-1d89-4200-8f1a-92d7a438f96b/click - {}
+RESULT: {}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//div[contains(@class, \"dropdown__list-item\") and contains(text(), \".org\")]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//div[contains(@class, \"dropdown__list-item\") and contains(text(), \".org\")]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element/bb6ac81a-7982-4889-84f7-373a7cdacdf3/click - {}
+RESULT: {}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//label[@for=\"accept-terms-conditions\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//label[@for=\"accept-terms-conditions\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element/bb45187b-08ad-49df-9964-e30861a84cb2/click - {}
+RESULT: {}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//a[text()=\"Next\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//a[text()=\"Next\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element/f2fcf503-39cf-4fb3-b7d6-0b0a59892cdd/click - {}
+RESULT: {}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//div[@class=\"avatar-and-interests__form\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//div[@class=\"avatar-and-interests__form\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//label[@for=\"interest_unselectall\"]//span[@class=\"checkbox__box\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//label[@for=\"interest_unselectall\"]//span[@class=\"checkbox__box\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element/47cc5149-d8f4-4976-a045-5cf8ad1000e8/click - {}
+RESULT: {}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/elements - {"using":"xpath","value":"//*[@id=\"app\"]//label[@class=\"checkbox__label\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//label[@class=\"checkbox__label\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//div[@class=\"avatar-and-interests__interests-list\"]/div[1]//label[@class=\"checkbox__label\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//div[@class=\"avatar-and-interests__interests-list\"]/div[1]//label[@class=\"checkbox__label\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element/04b74f9c-de78-416c-bd4d-5db6b2fcc2d4/click - {}
+RESULT: {}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//div[@class=\"avatar-and-interests__interests-list\"]/div[2]//label[@class=\"checkbox__label\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//div[@class=\"avatar-and-interests__interests-list\"]/div[2]//label[@class=\"checkbox__label\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element/e0004dac-4cd5-4d83-b215-38b4b674da29/click - {}
+RESULT: {}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//div[@class=\"avatar-and-interests__interests-list\"]/div[3]//label[@class=\"checkbox__label\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//div[@class=\"avatar-and-interests__interests-list\"]/div[3]//label[@class=\"checkbox__label\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element/19a12872-95d8-48cc-9ecf-6f163619321a/click - {}
+RESULT: {}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//button[text()=\"Next\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//button[text()=\"Next\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element/79f90a20-fec3-49db-9c17-346868d33498/click - {}
+RESULT: {}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//li[@class=\"avatar-and-interests__error\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//li[@class=\"avatar-and-interests__error\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/execute/sync - {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (7807 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"04f8e108-360f-4bc7-8b3a-2033fe55a776","ELEMENT":"04f8e108-360f-4bc7-8b3a-2033fe55a776"}]}
+RESULT: {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (7807 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"04f8e108-360f-4bc7-8b3a-2033fe55a776","ELEMENT":"04f8e108-360f-4bc7-8b3a-2033fe55a776"}]}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//li[@class=\"avatar-and-interests__error\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//li[@class=\"avatar-and-interests__error\"]"}
+COMMAND: GET /session/616f9ab8b1502ca55108750b92295944/element/04f8e108-360f-4bc7-8b3a-2033fe55a776/text - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.110_0_5481_177.linux.userinyerface" name="Help form is hidden" time="0.381">
+      <system-out><![CDATA[
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/url - {"url":"https://userinyerface.com/"}
+RESULT: {"url":"https://userinyerface.com/"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//button[@class=\"start__button\"]"}
+RESULT: {"using":"xpath","value":"//button[@class=\"start__button\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//a[@class=\"start__link\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//a[@class=\"start__link\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element/05f3c5f7-8903-47e1-ae7e-78eb6515fbe8/click - {}
+RESULT: {}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//div[@class=\"password-check\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//div[@class=\"password-check\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/execute/sync - {"script":"return (()=> {\n      const element = document.querySelector(\".help-form\")\n      element.style.display = \"none\"\n    }).apply(null, arguments)","args":[]}
+RESULT: {"script":"return (()=> {\n      const element = document.querySelector(\".help-form\")\n      element.style.display = \"none\"\n    }).apply(null, arguments)","args":[]}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//div[@class=\"help-form\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//div[@class=\"help-form\"]"}
+COMMAND: GET /session/616f9ab8b1502ca55108750b92295944/element/34ae2e2f-8002-48d9-9d80-77f73a9beb00/attribute/style - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.110_0_5481_177.linux.userinyerface" name="Form is closed" time="2.538">
+      <system-out><![CDATA[
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/url - {"url":"https://userinyerface.com/"}
+RESULT: {"url":"https://userinyerface.com/"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//button[@class=\"start__button\"]"}
+RESULT: {"using":"xpath","value":"//button[@class=\"start__button\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//a[@class=\"start__link\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//a[@class=\"start__link\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element/cd5902d4-0da1-4cd5-be13-288099d15220/click - {}
+RESULT: {}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//div[@class=\"password-check\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//div[@class=\"password-check\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//button[text()=\"Not really, no\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//button[text()=\"Not really, no\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//button[text()=\"Not really, no\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//button[text()=\"Not really, no\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//button[text()=\"Not really, no\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//button[text()=\"Not really, no\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//button[text()=\"Not really, no\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//button[text()=\"Not really, no\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//button[text()=\"Not really, no\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//button[text()=\"Not really, no\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//button[text()=\"Not really, no\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//button[text()=\"Not really, no\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/execute/sync - {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (7807 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"8b310e03-ca2a-4b84-81eb-430624e65663","ELEMENT":"8b310e03-ca2a-4b84-81eb-430624e65663"}]}
+RESULT: {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (7807 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"8b310e03-ca2a-4b84-81eb-430624e65663","ELEMENT":"8b310e03-ca2a-4b84-81eb-430624e65663"}]}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//button[text()=\"Not really, no\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//button[text()=\"Not really, no\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element/8b310e03-ca2a-4b84-81eb-430624e65663/click - {}
+RESULT: {}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//button[text()=\"Not really, no\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//button[text()=\"Not really, no\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//button[text()=\"Not really, no\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//button[text()=\"Not really, no\"]"}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.110_0_5481_177.linux.userinyerface" name="Timer starts on 00 00" time="0.444">
+      <system-out><![CDATA[
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/url - {"url":"https://userinyerface.com/"}
+RESULT: {"url":"https://userinyerface.com/"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//button[@class=\"start__button\"]"}
+RESULT: {"using":"xpath","value":"//button[@class=\"start__button\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//a[@class=\"start__link\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//a[@class=\"start__link\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element/ac1c3176-23c1-4b96-a780-ca7575415bcb/click - {}
+RESULT: {}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//div[@class=\"password-check\"]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//div[@class=\"password-check\"]"}
+COMMAND: POST /session/616f9ab8b1502ca55108750b92295944/element - {"using":"xpath","value":"//*[@id=\"app\"]//div[contains(@class, \"timer\")]"}
+RESULT: {"using":"xpath","value":"//*[@id=\"app\"]//div[contains(@class, \"timer\")]"}
+COMMAND: GET /session/616f9ab8b1502ca55108750b92295944/element/4c9959ee-3e0b-4643-8721-7936b5b2a9b2/text - {}
+RESULT: {}
+COMMAND: DELETE /session/616f9ab8b1502ca55108750b92295944 - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
