@@ -8,7 +8,7 @@ export const config = {
   capabilities: [
     {
       maxInstances: 5,
-      browserName: "firefox",
+      browserName: "chrome",
     },
   ],
   logLevel: "info",
