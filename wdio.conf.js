@@ -8,9 +8,12 @@ export const config = {
   capabilities: [
     {
       maxInstances: 5,
-      browserName: "chrome",
+      browserName: process.env.BROWSER_NAME || "chrome",
       "goog:chromeOptions": {
-        args: ["disable-dev-shm-usage", "no-sandbox", "headless"]
+        args: ["headless"]
+      },
+      "moz:firefoxOptions": {
+        args: ['-headless']
       }
     },
   ],
