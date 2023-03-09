@@ -9,7 +9,6 @@ export const config = {
     {
       maxInstances: 5,
       browserName: "chrome",
-      acceptInsecureCerts: true,
     },
   ],
   logLevel: "info",
