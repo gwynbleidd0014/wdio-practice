@@ -25,7 +25,14 @@ export const config = {
   connectionRetryCount: 3,
   services: [],
   framework: "mocha",
-  reporters: ["spec"],
+  reporters: ["spec",
+  ['junit', {
+    outputDir: './reports',
+    outputFileFormat: function(options) { // optional
+        return `results-${options.cid}.${new Date().getDate()}.xml`
+    }
+}]  
+],
   mochaOpts: {
     ui: "bdd",
     timeout: 10000,
