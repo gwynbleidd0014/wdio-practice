@@ -1,18 +1,16 @@
-/**
-* main page object containing all methods, selectors and functionality
-* that is shared across all page objects
-*/
-export default class Page {
-    constructor(uniqueLocator, name) {
-        this.uniqueLocator = uniqueLocator
-        this.name = name
-    }
-    open (path) {
-        return browser.url(`https://userinyerface.com/${path}`)
-    }
+import Browser from "../utils/browser.util.js";
 
-    async isOpen() {
-        const element = await $(this.uniqueLocator)
-        return element ? true : false
-    }
+export default class Page {
+  constructor(uniqueElement, name, path) {
+    this.uniqueElement = uniqueElement;
+    this.name = name;
+    this.path = path;
+  }
+
+  async navigate() {
+    await Browser.open(this.path);
+  }
+  async isOpen() {
+    return await this.uniqueElement.isDisplayed();
+  }
 }

@@ -1,13 +1,9 @@
-import Base from './base.element.js'
+import Base from "./base.element.js";
 
 class Ancor extends Base {
   constructor(locator, name) {
-    super(locator, name)
-  }
-
-  async click(){
-    await this.getElement().click()
+    super(locator, name);
   }
 }
 
-export default Ancor
+export default Ancor;
