@@ -9,9 +9,9 @@ export const config = {
     {
       maxInstances: 5,
       browserName: process.env.BROWSER_NAME || "chrome",
-      // "goog:chromeOptions": {
-      //   args: ["headless"]
-      // },
+      "goog:chromeOptions": {
+        args: ["headless"]
+      },
       // "moz:firefoxOptions": {
       //   args: ['-headless']
       // }
