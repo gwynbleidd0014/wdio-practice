@@ -4,7 +4,7 @@ import Button from "../elements/button.element.js";
 
 class Home extends Page {
   constructor() {
-    super(new Button(`//button[@class="start__button"]`), "Home Page", "");
+    super(new Button(`//button[@class="start__button"]`), "Home Page");
   }
 
   get hereLink() {

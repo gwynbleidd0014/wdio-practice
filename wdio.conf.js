@@ -9,12 +9,12 @@ export const config = {
     {
       maxInstances: 5,
       browserName: process.env.BROWSER_NAME || "chrome",
-      "goog:chromeOptions": {
-        args: ["headless"]
-      },
-      "moz:firefoxOptions": {
-        args: ['-headless']
-      }
+      // "goog:chromeOptions": {
+      //   args: ["headless"]
+      // },
+      // "moz:firefoxOptions": {
+      //   args: ['-headless']
+      // }
     },
   ],
   logLevel: "info",
@@ -23,11 +23,11 @@ export const config = {
   waitforTimeout: 10000,
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
-  services: ["chromedriver"],
+  services: [],
   framework: "mocha",
   reporters: ["spec"],
   mochaOpts: {
     ui: "bdd",
-    timeout: 60000,
+    timeout: 10000,
   },
 };

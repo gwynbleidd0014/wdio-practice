@@ -2,7 +2,7 @@ import { assert } from "chai";
 import data from "../../data/ui/ui.data.json" assert { type: "json" };
 
 class Browser {
-  open(path) {
+  open(path="") {
     return browser.url(`${data.baseURL}${path}`);
   }
 }

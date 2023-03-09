@@ -2,7 +2,7 @@
   "baseURL": "https://userinyerface.com/",
   "case1": {
     "notificationText": "Please upload a picture",
-    "notificationTextColor": "rgba(41,197,102,1)"
+    "notificationTextColor": "rgb(41,197,102)"
   },
   "case4": {
     "timerStart": "00:00:00"
