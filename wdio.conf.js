@@ -10,7 +10,7 @@ export const config = {
       maxInstances: 5,
       browserName: "chrome",
       "goog:chromeOptions": {
-        args: ["disable-dev-shm-usage", "no-sandbox"]
+        args: ["disable-dev-shm-usage", "no-sandbox", "headless"]
       }
     },
   ],
