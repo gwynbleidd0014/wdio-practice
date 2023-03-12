@@ -9,10 +9,10 @@ export const config = {
   capabilities: [
     {
       maxInstances: 5,
-      browserName: process.env.BROWSER_NAME,
+      browserName: process.env.BROWSER_NAME || "chrome",
       acceptInsecureCerts: true,
       "goog:chromeOptions": {
-        args: ["headless", "disable-gpu"],
+        args: ["headless"],
       },
       "moz:firefoxOptions": {
         args: ["-headless"],
@@ -33,7 +33,7 @@ export const config = {
       {
         outputDir: "./",
         outputFileFormat: function (options) {
-          return `results-${options.cid}.${new Date().getDate}.xml`;
+          return `./reports/results-${options.cid}.${new Date().getDate}.xml`;
         },
       },
     ],
