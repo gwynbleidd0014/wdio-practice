@@ -24,7 +24,7 @@ export const config = {
   waitforTimeout: 10000,
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
-  services: ["selenium-standalone"],
+  services: ["selenium-standalone", "chromedriver"],
   framework: "mocha",
   reporters: [
     "spec",
@@ -33,7 +33,7 @@ export const config = {
       {
         outputDir: "./",
         outputFileFormat: function (options) {
-          return `./reports/results-${options.cid}.${new Date().getDate}.xml`;
+          return `./reports/results-${options.cid}.${new Date().getDate()}.xml`;
         },
       },
     ],
