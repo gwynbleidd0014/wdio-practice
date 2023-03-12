@@ -12,7 +12,7 @@ export const config = {
       browserName: process.env.BROWSER_NAME || "chrome",
       acceptInsecureCerts: true,
       "goog:chromeOptions": {
-        args: ["--headless"],
+        args: ["headless", "disable-gpu"],
       },
       // "moz:firefoxOptions": {
       //   args: ["-headless"],
