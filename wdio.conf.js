@@ -26,7 +26,18 @@ export const config = {
   connectionRetryCount: 3,
   services: ["selenium-standalone"],
   framework: "mocha",
-  reporters: ["spec"],
+  reporters: [
+    "spec",
+    [
+      "junit",
+      {
+        outputDir: "./",
+        outputFileFormat: function (options) {
+          return `results-${options.cid}.${new Date().getDate}.xml`;
+        },
+      },
+    ],
+  ],
   mochaOpts: {
     ui: "bdd",
     timeout: 60000,
