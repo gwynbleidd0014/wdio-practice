@@ -10,9 +10,8 @@ export const config = {
     {
       maxInstances: 5,
       browserName: process.env.BROWSER_NAME || "chrome",
-      acceptInsecureCerts: true,
       "goog:chromeOptions": {
-        args: ["headless", "disable-gpu"],
+        args: ["headless", "--disable-dev-shm-usage", "--no-sandbox"],
       },
       "moz:firefoxOptions": {
         args: ["-headless"],
