@@ -14,9 +14,9 @@ export const config = {
       "goog:chromeOptions": {
         args: ["headless", "disable-gpu"],
       },
-      // "moz:firefoxOptions": {
-      //   args: ["-headless"],
-      // },
+      "moz:firefoxOptions": {
+        args: ["-headless"],
+      },
     },
   ],
   logLevel: "info",
