@@ -14,9 +14,9 @@ export const config = {
       "goog:chromeOptions": {
         args: ["--headless"],
       },
-      "moz:firefoxOptions": {
-        args: ["-headless"],
-      },
+      // "moz:firefoxOptions": {
+      //   args: ["-headless"],
+      // },
     },
   ],
   logLevel: "info",
@@ -24,7 +24,7 @@ export const config = {
   waitforTimeout: 10000,
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
-  services: ["selenium-standalone", "chromedriver"],
+  services: ["selenium-standalone"],
   framework: "mocha",
   reporters: [
     "spec",
