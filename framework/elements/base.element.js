@@ -1,3 +1,5 @@
+import { config } from "../../wdio.conf.js";
+
 export default class BaseElement {
   constructor(locator, name) {
     this.locator = locator;
@@ -8,27 +10,22 @@ export default class BaseElement {
     return $(this.locator);
   }
   async getAttribute(attr) {
-    return await this.getElement().getAttribute(attr);
-  }
-
-  async waitForDisplayed() {
-    await wait.waitForDisplayed(this.getElement());
+    return this.getElement().getAttribute(attr);
   }
 
   async isDisplayed() {
-    return await this.getElement().isDisplayed();
+    return this.getElement().isDisplayed();
   }
 
   async click() {
     await this.getElement().click();
   }
 
-  async waitForDisplayed(timeout = null) {
-    const options = timeout ? { timeout } : {};
-    await this.getElement().waitForDisplayed(options);
+  async waitForDisplayed(timeout = config.waitforTimeout) {
+    await this.getElement().waitForDisplayed({ timeout });
   }
 
   async getStyle(property) {
-    return await this.getElement().getCSSProperty(property);
+    return this.getElement().getCSSProperty(property);
   }
 }

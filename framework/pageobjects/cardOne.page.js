@@ -1,5 +1,5 @@
 import Page from "./page.js";
-import random from "../utils/random.util.js";
+import random from "../utils/random/random.util.js";
 import { config } from "../../wdio.conf.js";
 import Input from "../elements/input.element.js";
 import Button from "../elements/button.element.js";
@@ -77,16 +77,14 @@ class CardOne extends Page {
     );
   }
 
+  async inputRandomText(el) {
+    await el.inputText(random.randomString(config.randomStringLength));
+  }
+
   async fillForm() {
-    await this.passwordInput.inputText(
-      random.randomString(config.randomStringLength)
-    );
-    await this.emailInput.inputText(
-      random.randomString(config.randomStringLength)
-    );
-    await this.domainInput.inputText(
-      random.randomString(config.randomStringLength)
-    );
+    await this.inputRandomText(this.passwordInput);
+    await this.inputRandomText(this.emailInput);
+    await this.inputRandomText(this.domainInput);
     await this.dropdownButton.click();
     await this.drowpdownItem.click();
     await this.termsLabel.click();
@@ -104,7 +102,7 @@ class CardOne extends Page {
   }
 
   async helpForIsDisplayed() {
-    return await this.helpForm.isDisplayed();
+    return this.helpForm.isDisplayed();
   }
 
   async acceptCookies() {
@@ -117,7 +115,7 @@ class CardOne extends Page {
   }
 
   async getTimerText() {
-    return await this.timer.getText();
+    return this.timer.getText();
   }
 }
 

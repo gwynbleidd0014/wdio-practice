@@ -6,7 +6,7 @@ class Label extends Base {
   }
 
   async getText() {
-    return await this.getElement().getText();
+    return this.getElement().getText();
   }
 }
 

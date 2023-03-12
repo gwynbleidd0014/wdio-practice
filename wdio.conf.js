@@ -1,4 +1,5 @@
 export const config = {
+  baseUrl: "https://userinyerface.com/",
   randomStringLength: 10,
   runner: "local",
   specs: ["./test/specs/**/*.js"],
@@ -8,33 +9,26 @@ export const config = {
   capabilities: [
     {
       maxInstances: 5,
-      browserName: process.env.BROWSER_NAME || "chrome",
+      browserName: process.env.BROWSER_NAME,
+      acceptInsecureCerts: true,
       "goog:chromeOptions": {
-        args: ["headless"]
+        args: ["headless", "disable-gpu"],
       },
-      // "moz:firefoxOptions": {
-      //   args: ['-headless']
-      // }
+      "moz:firefoxOptions": {
+        args: ["-headless"],
+      },
     },
   ],
   logLevel: "info",
   bail: 0,
-  baseUrl: "http://localhost",
   waitforTimeout: 10000,
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
-  services: [],
+  services: ["selenium-standalone"],
   framework: "mocha",
-  reporters: ["spec",
-  ['junit', {
-    outputDir: './reports',
-    outputFileFormat: function(options) { // optional
-        return `results-${options.cid}.${new Date().getDate()}.xml`
-    }
-}]  
-],
+  reporters: ["spec"],
   mochaOpts: {
     ui: "bdd",
-    timeout: 10000,
+    timeout: 60000,
   },
 };

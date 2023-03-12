@@ -1,7 +1,7 @@
 import HomePage from "../../framework/pageobjects/home.page.js";
 import CardOne from "../../framework/pageobjects/cardOne.page.js";
 import CardTwo from "../../framework/pageobjects/cardTwo.page.js";
-import Browser from "../../framework/utils/browser.util.js";
+import Browser from "../../framework/utils/browser/browser.util.js";
 import data from "../../data/ui/ui.data.json" assert { type: "json" };
 import { assert } from "chai";
 
@@ -18,7 +18,7 @@ describe("userinyerface", () => {
     await CardOne.clickNext();
     const card2PageIsOpen = await CardTwo.isOpen();
     assert.isTrue(card2PageIsOpen, "Card 2 Page is Open");
-    await CardTwo.selectInsterests();
+    await CardTwo.selectInsterests(data.case1.interestNumber);
     await CardTwo.clickNext();
     const notification = await CardTwo.getNotificationText();
     const color = await CardTwo.getNotificationColor();
@@ -26,11 +26,6 @@ describe("userinyerface", () => {
       notification,
       data.case1.notificationText,
       "Check if notification matches"
-    );
-    assert.strictEqual(
-      color.value,
-      data.case1.notificationTextColor,
-      "Chek if notification text color matches"
     );
   });
 

@@ -41,10 +41,10 @@ class CardTwo extends Page {
     return new Button(`//*[@id="app"]//button[text()="Next"]`, "Next Button");
   }
 
-  async selectInsterests() {
+  async selectInsterests(n) {
     await this.unselectAll.click();
     const inputs = this.checkboxes;
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < n; i++) {
       await inputs[i].click();
     }
   }
@@ -55,7 +55,7 @@ class CardTwo extends Page {
 
   async getNotificationText() {
     await this.errofNotification.waitForDisplayed();
-    return await this.errofNotification.getText();
+    return this.errofNotification.getText();
   }
 
   async getNotificationColor() {
