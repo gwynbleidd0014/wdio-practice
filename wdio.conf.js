@@ -22,10 +22,7 @@ export const config = {
   waitforTimeout: 10000,
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
-  services:
-    process.env.BROWSER_NAME === "chrome"
-      ? ["chromedriver"]
-      : ["selenium-standalone"],
+  services: ["selenium-standalone"],
   framework: "mocha",
   reporters: [
     "spec",
