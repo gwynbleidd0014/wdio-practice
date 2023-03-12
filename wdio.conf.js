@@ -8,9 +8,9 @@ export const config = {
   capabilities: [
     {
       maxInstances: 5,
-      browserName: process.env.BROWSER_NAME || "chrome",
+      browserName: process.env.BROWSER_NAME || "firefox",
       "goog:chromeOptions": {
-        args: ["headless", "--disable-dev-shm-usage", "--no-sandbox"],
+        args: ["--headless", "--no-sandbox", "--disable-dev-shm-usage"],
       },
       "moz:firefoxOptions": {
         args: ["-headless"],
@@ -22,10 +22,7 @@ export const config = {
   waitforTimeout: 10000,
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
-  services:
-    process.env.BROWSER_NAME === "chrome"
-      ? ["chromedriver"]
-      : ["selenium-standalone"],
+  services: ["selenium-standalone"],
   framework: "mocha",
   reporters: [
     "spec",
